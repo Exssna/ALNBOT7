@@ -2,7 +2,7 @@ const help = (pushname, prefix, botName, ownerName, reqXp, uangku) => {
         return `
 ┏ *〈 ${botName} 〉*
 ╿
-┷┯ *〈 Bot nabuto 〉*
+┷┯ *〈 ALN BOT 〉*
    ╽
    ┠≽ *Nome* : ${pushname}
    ┠≽ *XP* : ${reqXp}
@@ -13,7 +13,7 @@ const help = (pushname, prefix, botName, ownerName, reqXp, uangku) => {
 ╽
 ┠≽ *Prefixo* : 「  ${prefix}  」
 ┠≽ *O Criador* : ${ownerName}
-┠≽ *Versão* : 「  2.4.9  」
+┠≽ *Versão* : 「  7.0.1  」
 ╿
 ┷┯ *〈 COMANDOS A BAIXO 〉*
    ┠≽ *${prefix}logomakermenu*
@@ -41,6 +41,6 @@ const help = (pushname, prefix, botName, ownerName, reqXp, uangku) => {
    ┠≽ *${prefix}ownermenu*
    ┠≽ *${prefix}othermenu*
    ╿ *${ownerName}*,
-   ╰╼≽ *Desenvolvedor © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.help = help
