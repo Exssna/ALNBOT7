@@ -6,7 +6,7 @@ const adult = (prefix, botName, ownerName) => {
    ╽
    ┠≽ *Prefix* : 「  ${prefix}  」
    ┠≽ *Creator* : ${ownerName}
-   ┠≽ *Version* : 「  2.4.9  」
+   ┠≽ *Version* : 「  7.0.1  」
    ╿
 ┯┷ *〈 ABOUT 〉*
 ╽
@@ -14,46 +14,46 @@ const adult = (prefix, botName, ownerName) => {
 ┃ *Desc* : Show Bot Details
 ┠──────────────╼
 ┠≽ *${prefix}blocklist*
-┃ *Desc* : Show Blocked User
+┃ *Desc* : Mostrar usuário bloqueado
 ┠──────────────╼
 ┠≽ *${prefix}chatlist*
-┃ *Desc* : Show All Chat User
+┃ *Desc* : Mostrar todos os usuários de bate-papo
 ┠──────────────╼
 ┠≽ *${prefix}ping*
-┃ *Desc* : Show Connection Bot Speed
+┃ *Desc* : Mostrar velocidade do bot de conexão
 ┠──────────────╼
 ┠≽ *${prefix}totaluser*
-┃ *Desc* : Show All User Use Bot
+┃ *Desc* : Mostrar bot de uso de todos os usuários
 ┠──────────────╼
 ┠≽ *${prefix}request*
-┃ *Desc* : Request Fiture To Owner Bot
+┃ *Desc* : Solicitar recursos para o robô proprietário
 ┠──────────────╼
 ┠≽ *${prefix}bugreport* <text>
-┃ *Desc* : Report Bug To Owner Bot
+┃ *Desc* : Reportar bug ao proprietário do bot
 ╿
 ┷┯ *〈 18+ 〉*
    ╽
    ┠≽ *${prefix}randomhentai*
-   ┃ *Desc* : Sending Random Hentai Image
+   ┃ *Desc* : Envio de imagem Hentai aleatória
    ┠──────────────╼
    ┠≽ *${prefix}randombokep*
-   ┃ *Desc* : Sending Random Bokep File
+   ┃ *Desc* : Enviando arquivo Bokep aleatório
    ┠──────────────╼
    ┠≽ *${prefix}nsfwtrap*
-   ┃ *Desc* : Sending Random NSFW Trap Image (nsfw needed)
+   ┃ *Desc* : Enviando imagem aleatória de Traveco NSFW (nsfw necessário)
    ┠──────────────╼
    ┠≽ *${prefix}nekopoi*
-   ┃ *Desc* : Search NekoPoi.care
+   ┃ *Desc* : Pesquisar NekoPoi.care
    ┠──────────────╼
    ┠≽ *${prefix}xvideos*
-   ┃ *Desc* : Search Xvideos
+   ┃ *Desc* : Pesquisar Xvideos
    ┠──────────────╼
    ┠≽ *${prefix}pornhub*
-   ┃ *Desc* : Search PornHub
+   ┃ *Desc* : Pesquisar PornHub
    ┠──────────────╼
    ┠≽ *${prefix}nsfwneko*
-   ┃ *Desc* : Sending Random NSFW Neko Image (nsfw needed)
+   ┃ *Desc* : Enviando imagem NSFW Neko aleatória (nsfw necessário)
    ╿ *${ownerName}*,
-   ╰╼≽ *Developer © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.adult = adult
