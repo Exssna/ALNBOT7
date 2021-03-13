@@ -6,63 +6,63 @@ const downloader = (prefix, botName, ownerName) => {
    ╽
    ┠≽ *Prefix* : 「  ${prefix}  」
    ┠≽ *Creator* : ${ownerName}
-   ┠≽ *Version* : 「  2.4.9  」
+   ┠≽ *Version* : 「  7.0.1  」
    ╿
 ┯┷ *〈 ABOUT 〉*
 ╽
 ┠≽ *${prefix}info* 
-┃ *Desc* : Show Bot Details
+┃ *Desc* : Mostrar detalhes do bot
 ┠──────────────╼
 ┠≽ *${prefix}blocklist*
-┃ *Desc* : Show Blocked User
+┃ *Desc* : Mostrar usuário bloqueado
 ┠──────────────╼
 ┠≽ *${prefix}chatlist* 
-┃ *Desc* : Show All Chat User
+┃ *Desc* : Mostrar todos os usuários de chat
 ┠──────────────╼
 ┠≽ *${prefix}ping*
-┃ *Desc* : Show Connection Bot Speed
+┃ *Desc* : Mostrar velocidade do bot de conexão
 ┠──────────────╼
 ┠≽ *${prefix}totaluser*
-┃ *Desc* : Show All User Use Bot
+┃ *Desc* : Mostrar bot de uso de todos os usuários
 ┠──────────────╼
 ┠≽ *${prefix}request*
-┃ *Desc* : Request Fiture To Owner Bot
+┃ *Desc* : Solicitar recursos para o robô proprietário
 ┠──────────────╼
 ┠≽ *${prefix}bugreport* <text>
-┃ *Desc* : Report Bug To Owner Bot
+┃ *Desc* : Reportar bug ao proprietário do bot
 ╿
 ┷┯ *〈 DOWNLOADER 〉*
    ╽
    ┠≽ *${prefix}pinterest* <query>
-   ┃ *Desc* : Download Image From Pinterest
+   ┃ *Desc* : Baixar imagem do Pinterest
    ┠──────────────╼
    ┠≽ *${prefix}ytmp3* <linkyt>
-   ┃ *Desc* : Download Youtube Video to Mp3
+   ┃ *Desc* : Baixe o vídeo do Youtube para mp3
    ┠──────────────╼
    ┠≽ *${prefix}ytmp4* <linkyt>
-   ┃ *Desc* : Download Youtube Video
+   ┃ *Desc* : Baixe vídeos do Youtube
    ┠──────────────╼
    ┠≽ *${prefix}fb* <linkfb>
-   ┃ *Desc* : Download Facebook Video
+   ┃ *Desc* : Baixe o vídeo do Facebook
    ┠──────────────╼
    ┠≽ *${prefix}ig* <linkig>
-   ┃ *Desc* : Download Instagram Video
+   ┃ *Desc* : Baixar vídeos do Instagram
    ┠──────────────╼
    ┠≽ *${prefix}igstory* <linkigstory>
-   ┃ *Desc* : Download Instastory Video
+   ┃ *Desc* : Baixe o vídeo instantâneo
    ┠──────────────╼
    ┠≽ *${prefix}happymod* <game>
-   ┃ *Desc* : Download Game Mod
+   ┃ *Desc* : Baixar Game Mod
    ┠──────────────╼
    ┠≽ *${prefix}moddroid* <game>
    ┃ *Desc* : Download Game Mod
    ┠──────────────╼
    ┠≽ *${prefix}playstore* <query>
-   ┃ *Desc* : Download Game By Playtore
+   ┃ *Desc* : Baixe jogos na Playstore
    ┠──────────────╼
    ┠≽ *${prefix}tiktok* <linktiktok>
-   ┃ *Desc* : Download TikTok Video
+   ┃ *Desc* : baixar o vídeo TikTok
    ╿ *${ownerName}*,
-   ╰╼≽ *Developer © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.downloader = downloader
