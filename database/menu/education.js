@@ -6,60 +6,60 @@ const education = (prefix, botName, ownerName) => {
    ╽
    ┠≽ *Prefix* : 「  ${prefix}  」
    ┠≽ *Creator* : ${ownerName}
-   ┠≽ *Version* : 「  2.4.9  」
+   ┠≽ *Version* : 「  7.0.1  」
    ╿
 ┯┷ *〈 ABOUT 〉*
 ╽
-┠≽ *${prefix}info*
-┃ *Desc* : Show Bot Details
+┠≽ *${prefix}info* 
+┃ *Desc* : Mostrar detalhes do bot
 ┠──────────────╼
 ┠≽ *${prefix}blocklist*
-┃ *Desc* : Show Blocked User
+┃ *Desc* : Mostrar usuário bloqueado
 ┠──────────────╼
-┠≽ *${prefix}chatlist*
-┃ *Desc* : Show All Chat User
+┠≽ *${prefix}chatlist* 
+┃ *Desc* : Mostrar todos os usuários de chat
 ┠──────────────╼
 ┠≽ *${prefix}ping*
-┃ *Desc* : Show Connection Bot Speed
+┃ *Desc* : Mostrar velocidade do bot de conexão
 ┠──────────────╼
 ┠≽ *${prefix}totaluser*
-┃ *Desc* : Show All User Use Bot
+┃ *Desc* : Mostrar bot de uso de todos os usuários
 ┠──────────────╼
 ┠≽ *${prefix}request*
-┃ *Desc* : Request Fiture To Owner Bot
+┃ *Desc* : Solicitar recursos para o robô proprietário
 ┠──────────────╼
 ┠≽ *${prefix}bugreport* <text>
-┃ *Desc* : Report Bug To Owner Bot
+┃ *Desc* : Reportar bug ao proprietário do bot
 ╿
 ┷┯ *〈 EDUCATION 〉*
    ╽
    ┠≽ *${prefix}wiki* <query>
-   ┃ *Desc* : Search According to Wikipedia [indo]
+   ┃ *Desc* : Pesquisa de acordo com a Wikipedia [indo]
    ┠──────────────╼
    ┠≽ *${prefix}wikien* <query>
-   ┃ *Desc* : Search According to Wikipedia [english]
+   ┃ *Desc* : Pesquisa de acordo com a Wikipedia [inglês]
    ┠──────────────╼
    ┠≽ *${prefix}nulis* <text>
-   ┃ *Desc* : Write a Text on Book
+   ┃ *Desc* : Escreva um texto no livro
    ┠──────────────╼
    ┠≽ *${prefix}map* <location>
-   ┃ *Desc* : Show Map in Location
+   ┃ *Desc* : Mostrar mapa na localização
    ┠──────────────╼
    ┠≽ *${prefix}quotes*
-   ┃ *Desc* : Send a Random Quotes
+   ┃ *Desc* : Envie uma cotação aleatória
    ┠──────────────╼
    ┠≽ *${prefix}quotes2*
-   ┃ *Desc* : Send a Random Quotes2
+   ┃ *Desc* : Envie uma cotação aleatória 2
    ┠──────────────╼
    ┠≽ *${prefix}tafsirmimpi* <dream>
-   ┃ *Desc* : Send a Dream Interpretation
+   ┃ *Desc* : Envie uma interpretação do sonho
    ┠──────────────╼
    ┠≽ *${prefix}translate* <language_code>|<text>
-   ┃ *Desc* : Translating a word
+   ┃ *Desc* : Traduzindo uma palavra
    ┠──────────────╼
    ┠≽ *${prefix}artinama* <name>
-   ┃ *Desc* : Interpret Names
+   ┃ *Desc* : Interpretar nomes
    ╿ *${ownerName}*,
-   ╰╼≽ *Developer © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.education = education
