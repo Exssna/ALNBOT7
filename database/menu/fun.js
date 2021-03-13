@@ -6,35 +6,35 @@ const fun = (prefix, botName, ownerName) => {
    ╽
    ┠≽ *Prefix* : 「  ${prefix}  」
    ┠≽ *Creator* : ${ownerName}
-   ┠≽ *Version* : 「  2.4.9  」
+   ┠≽ *Version* : 「  7.0.1  」
    ╿
 ┯┷ *〈 ABOUT 〉*
 ╽
-┠≽ *${prefix}info*
-┃ *Desc* : Show Bot Details
+┠≽ *${prefix}info* 
+┃ *Desc* : Mostrar detalhes do bot
 ┠──────────────╼
 ┠≽ *${prefix}blocklist*
-┃ *Desc* : Show Blocked User
+┃ *Desc* : Mostrar usuário bloqueado
 ┠──────────────╼
-┠≽ *${prefix}chatlist*
-┃ *Desc* : Show All Chat User
+┠≽ *${prefix}chatlist* 
+┃ *Desc* : Mostrar todos os usuários de chat
 ┠──────────────╼
 ┠≽ *${prefix}ping*
-┃ *Desc* : Show Connection Bot Speed
+┃ *Desc* : Mostrar velocidade do bot de conexão
 ┠──────────────╼
 ┠≽ *${prefix}totaluser*
-┃ *Desc* : Show All User Use Bot
+┃ *Desc* : Mostrar bot de uso de todos os usuários
 ┠──────────────╼
 ┠≽ *${prefix}request*
-┃ *Desc* : Request Fiture To Owner Bot
+┃ *Desc* : Solicitar recursos para o robô proprietário
 ┠──────────────╼
 ┠≽ *${prefix}bugreport* <text>
-┃ *Desc* : Report Bug To Owner Bot
+┃ *Desc* : Reportar bug ao proprietário do bot
 ╿
 ┷┯ *〈 FUN 〉*
    ╽
    ┠≽ *${prefix}alay* <text>
-   ┃ *Desc* : Changing Words Into Alay
+   ┃ *Desc* : Mudando Palavras em Alay
    ┠──────────────╼
    ┠≽ *${prefix}tebakgambar* <text>
    ┃ *Desc* : Game
@@ -43,29 +43,29 @@ const fun = (prefix, botName, ownerName) => {
    ┃ *Desc* : Toxic
    ┠──────────────╼
    ┠≽ *${prefix}persenbucin*
-   ┃ *Desc* : Check Persentase Bucin
+   ┃ *Desc* : Verificar a porcentagem de Bucin
    ┠──────────────╼
    ┠≽ *${prefix}persengay*
-   ┃ *Desc* : Check Persentase Your Gay
+   ┃ *Desc* : Verifique sua porcentagem de gays
    ┠──────────────╼
    ┠≽ *${prefix}rate*
-   ┃ *Desc* : Check Your Rate
+   ┃ *Desc* : Verifique sua taxa
    ┠──────────────╼
    ┠≽ *${prefix}gantengcek*
-   ┃ *Desc* : How Handsome
+   ┃ *Desc* : Quão bonito
    ┠──────────────╼
    ┠≽ *${prefix}cantikcek*
-   ┃ *Desc* : How Beautiful
+   ┃ *Desc* : Que bonito
    ┠──────────────╼
    ┠≽ *${prefix}watak*
-   ┃ *Desc* : Transmitting Characters at Random
+   ┃ *Desc* : Transmitindo personagens ao acaso
    ┠──────────────╼
    ┠≽ *${prefix}hobby*
-   ┃ *Desc* : Randomly Sending Hobbies
+   ┃ *Desc* : Envio aleatório de hobbies
    ┠──────────────╼
    ┠≽ *${prefix}simi* <text>
-   ┃ *Desc* : Talk to Simi
+   ┃ *Desc* : Fale com Simi
    ╿ *${ownerName}*,
-   ╰╼≽ *Developer © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.fun = fun
