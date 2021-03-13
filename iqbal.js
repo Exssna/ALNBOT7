@@ -116,13 +116,13 @@ const { limit } = require('./database/menu/limit')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Muhammad Iqbal\n' // full name
-            + 'ORG:Owner JINGAN BOT;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=556993733829:+55 69-9373-3829\n' //Nomor whatsapp kamu
+            + 'ORG:Owner SR ALLISON;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=558688036194:+55 86-8803-6194\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = botPrefix
 blocked = []
 limitawal = userDefaultLimit
-cr = '*Verified*'
+cr = '*Verificado Sr Allison*'
 memberlimit = memberLimitss
 
 // Functions
@@ -323,20 +323,20 @@ async function starts() {
 		start('2', 'Connecting...')
 	})
 	iqbal.on('open', () => {
-		success('2', '[KONTOL] BOT UDAH AKTIF NGENTOD!')
+		success('2', '[CONTOLL] O BOT JÁ ESTÁ ATIVO!')
 	})
 	await iqbal.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Iqbal.json', JSON.stringify(iqbal.base64EncodedAuthInfo(), null, '\t'))
         
         console.log('=> Sabar tod gw load/save dulu!')
-        lolcatjs.fromString('[DEV] Welcome back Owner Bangsat! Semoga lu dapet hidayah jangan nonton bokep mulu')
+        lolcatjs.fromString('[DEV] Bem-vindo de volta Proprietário, filho da puta! Espero que você possa obter orientação, não assista pornografia')
 
 	iqbal.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
 		try {
 			const mdata = await iqbal.groupMetadata(anu.jid)
 			console.log(anu)
-			if (anu.action == 'add') {
+			if (anu.action == 'add01') {
 				num = anu.participants[0]
 				try {
 					ppimg = await iqbal.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
@@ -397,21 +397,21 @@ async function starts() {
             const q = args.join(' ')
             
             mess = {
-                                wait: '⌛ Sedang di Prosess Sabar yaa Ngentod⌛',
-                                succsess: '✔️ Berhasil  ✔️',
-                                levelon: '❬ ✔ ❭ *leveling diaktifkan*',
-                                levelnoton: `❬ X ❭  *leveling di nonaktifkan*`,
-                                levelnol: '*NGENTOD LEVEL LU MASIH* 0 °-°',
+                                wait: '⌛ espera está em andamento⌛',
+                                succsess: '✔️ sucesso  ✔️',
+                                levelon: '❬ ✔ ❭ *leveling ativado*',
+                                levelnoton: `❬ X ❭  *leveling Desativado*`,
+                                levelnol: '*SEU LEVEL AINDA* 0 °-°',
                                 error: {
-                                	    stick: '[❗] Gagal tod, terjadi kesalahan saat pengubahan gambar ke sticker❌',
-                                        Iv: '❌ Link nya gk valid ngentod ❌',
+                                	    stick: '[❗] falhou, ocorreu um erro ao converter a imagem em um adesivo❌',
+                                        Iv: '❌ desculpe, link inválido ❌',
                                 },
                         	only: {
-                        	        group: '[❗] SUMPAH LU TOLOL BET ANJINK, INI KHUSUS DI GRUP ANJINK  ❌',
-                                        ownerG: `[❗] Lu bukan owner grup ngentod! ❌`,
-                        	        admin: `[❗] Ehh... Anjink, lu itu cuma member jadi jangan sok keras yaa Ngentod ❌`,
-                                        Badmin: `[❗] Jadiin gw admin dulu lah ngentod! ❌`,
-                                        daftarB: `──「 BELUM REGISTER 」──\nHalo Ngentoters !\nLu kan belum Register nih tod, mending lu register dulu dahh... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Iqbal|17`,
+                        	        group: '[❗] DESCULPE, ESTE PEDIDO SÓ PODE SER USADO EM GRUPO  ❌',
+                                        ownerG: `[❗] ᴇsᴛᴇ ᴘᴇᴅɪᴅᴏ sᴏ́ ᴘᴏᴅᴇ sᴇʀ ᴜsᴀᴅᴏ ᴘᴇʟᴏ ɢʀᴜᴘᴏ ᴅᴇ ᴘʀᴏᴘʀɪᴇᴛᴀ́ʀɪᴏs! ❌`,
+                        	        admin: `[❗] sɪʟᴇɴᴄɪᴏ ᴍᴇᴍʙʀᴏ ᴄᴏᴍᴜᴍ, ᴠᴏᴄᴇ̂ ɴᴀ̃ᴏ ᴛᴇᴍ ᴍᴏʀᴀʟ ᴘᴀʀᴀ ᴜsᴀʀ ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅo ❌`,
+                                        Badmin: `[❗] ᴅᴇsᴄᴜʟᴘᴇ, ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ sᴏ́ ᴘᴏᴅᴇ sᴇʀ ᴜsᴀᴅᴏ ǫᴜᴀɴᴅᴏ ʙᴏᴛs sᴇ ᴛᴏʀɴᴀᴍ ᴀᴅᴍɪɴ! ❌`,
+                                        daftarB: `──「 AINDA NÃO REGISTRADO 」──\nOla macaco !\nVocê ainda não se cadastrou, mas é melhor se cadastrar primeiro... \n\nComando : ${prefix}register nome|idade\nExemplo : ${prefix}register Allison|16`,
                                 }
                         }
     		const apakah = ['Iya','Tidak','Mungkin','Mungkin iya','Mungkin tidak','Coba tanyakan lagi','Tidak mungkin','Coba tanyakan lagi']
@@ -435,7 +435,7 @@ async function starts() {
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
             const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-            const NomerOwner = '556993733829@s.whatsapp.net'
+            const NomerOwner = '558688036194@s.whatsapp.net'
             const isEventon = isGroup ? event.includes(from) : false
             const isRegister = checkRegisteredUser(sender)
             const isAntiLink = isGroup ? antilink.includes(from) : false
@@ -488,7 +488,7 @@ async function starts() {
                                         addLevelingXp(sender, amountXp)
                                         if (requiredXp <= getLevelingXp(sender)) {
                                         addLevelingLevel(sender, 1)
-                                        await reply(`*「 LEVEL UP 」*\n\n❑ *Name*: ${sender}\n❑ *XP*: ${getLevelingXp(sender)}\n❑ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🥳🎉`)
+                                        await reply(`*「 LEVEL UP 」*\n\n❑ *Name*: ${sender}\n❑ *XP*: ${getLevelingXp(sender)}\n❑ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nParabéns!! 🥳🎉`)
                                 }
                         } catch (err) {
                                 console.error(err)
@@ -500,7 +500,7 @@ async function starts() {
                         for (let lmt of _limit) {
                                 if (lmt.id === sender) {
                                         limitCounts = limitawal - lmt.limit
-                                        if (limitCounts <= 0) return iqbal.sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
+                                        if (limitCounts <= 0) return iqbal.sendMessage(from,`Seu limite de solicitação acabou\n\n_Note : O limite será zerado a cada hora 21:00!_`, text,{ quoted: mek})
                                         iqbal.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                                         found = true
                                 }
@@ -564,33 +564,33 @@ async function starts() {
         if (messagesC.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
 		if (!isAntiLink) return
-		if (isGroupAdmins) return reply('Untung lu admin grup jadi gk gw kick, coba klo lu member udah gw kick lu anjink')
+		if (isGroupAdmins) return reply('Felizmente você é o administrador do grupo, então eu não o expulso, se você for um membro, eu o expulso.')
 		iqbal.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`Link Group Terdeteksi Yahaha Mampus lu ${sender.split("@")[0]} Lu bakal gw kick dari group 5detik lagi`)
+		reply(`Link de grupo detectado. PROIBIDO LINK MACACO ${sender.split("@")[0]} Você será banido do grupo em 5 segundos`)
 		setTimeout( () => {
 			iqbal.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 5000)
 		setTimeout( () => {
 			iqbal.updatePresence(from, Presence.composing)
-			reply("1detik")
+			reply("1 segundo")
 		}, 4000)
 		setTimeout( () => {
 			iqbal.updatePresence(from, Presence.composing)
-			reply("2detik")
+			reply("2 segundos")
 		}, 3000)
 		setTimeout( () => {
 			iqbal.updatePresence(from, Presence.composing)
-			reply("3detik")
+			reply("3 segundos")
 		}, 2000)
 		setTimeout( () => {
 			iqbal.updatePresence(from, Presence.composing)
-			reply("4detik")
+			reply("4 segundos")
 		}, 1000)
 		setTimeout( () => {
 			iqbal.updatePresence(from, Presence.composing)
-			reply("5detik")
+			reply("5 segundos")
 		}, 0)
 	}
 
@@ -738,18 +738,18 @@ async function starts() {
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('𝐓𝐚𝐠 𝐭𝐚𝐫𝐠𝐞𝐭 𝐲𝐚𝐧𝐠 𝐦𝐚𝐮 𝐝𝐢 𝐭𝐮𝐫𝐮𝐧𝐤𝐚𝐧 𝐚𝐝𝐦𝐢𝐧')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A tag alvo que você deseja não é um administrador!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐝𝐢𝐭𝐞𝐫𝐢𝐦𝐚, 𝐦𝐞𝐧𝐮𝐫𝐮𝐧𝐤𝐚𝐧 𝐣𝐚𝐝𝐢 𝐚𝐝𝐦𝐢𝐧 𝐠𝐫𝐨𝐮𝐩 :\n`
+							teks += `Pedido recebido, você não é um administrador :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						iqbal.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐝𝐢𝐭𝐞𝐫𝐢𝐦𝐚, 𝐦𝐞𝐧𝐮𝐫𝐮𝐧𝐤𝐚𝐧 @${mentioned[0].split('@')[0]}\n 𝐣𝐚𝐝𝐢 𝐚𝐝𝐦𝐢𝐧 𝐠𝐫𝐨𝐮𝐩 _*${groupMetadata.subject}*_`, mentioned, true)
+						mentions(`Pedido recebido, rebaixado @${mentioned[0].split('@')[0]}\n Torneu-se um membro comum _*${groupMetadata.subject}*_`, mentioned, true)
 						iqbal.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -779,17 +779,17 @@ async function starts() {
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di promote!')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque o alvo que você deseja que seja um administrador!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Perintah di terima, menambah jabatan sebagai admin :\n'
+						teks = 'Pedido recebido, você se torna um administrador :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						iqbal.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Perintah di terima, menambah jabatan sebagai admin : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Pedido recebido, adicionar posição como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						iqbal.groupMakeAdmin(from, mentioned)
 					}
 					break
@@ -832,7 +832,7 @@ async function starts() {
               case 'owner':
                 case 'creator':
                   iqbal.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-               iqbal.sendMessage(from, 'Nih nomor owner gw tod, save ya anjink nanti di save balik',MessageType.text, { quoted: mek} )
+               iqbal.sendMessage(from, 'Aqui está o meu número do meu dono',MessageType.text, { quoted: mek} )
                 break
 	case 'hidetag':
                 iqbal.updatePresence(from, Presence.composing) 
@@ -950,13 +950,13 @@ async function starts() {
                                         await limitAdd(sender)
 					break				
 				case 'ytmp3':
-					if (args.length < 1) return reply('Urlnya mana ngentod?')
+					if (args.length < 1) return reply('Qual url é ngentod?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://mhankbarbar.tech/api/yta?url=${args[0]}&apiKey=${BarBarKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					teks = `❏ *Title* : ${anu.title}\n❏ *Filesize* : ${anu.filesize}\n\nTunggu Bentar Ya Tod, Audionya Lagi Di Kirim...`
+					teks = `❏ *Title* : ${anu.title}\n❏ *Tamanho do arquivo* : ${anu.filesize}\n\nEspere um minuto Sim Tod, o áudio é enviado novamente...`
 					thumb = await getBuffer(anu.thumb)
 					iqbal.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
@@ -964,7 +964,7 @@ async function starts() {
                                         await limitAdd(sender)
 					break
 				case 'ytmp4':
-					if (args.length < 1) return reply('Urlnya mana ngentod?')
+					if (args.length < 1) return reply('Qual url é ngentod?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
@@ -1018,7 +1018,7 @@ async function starts() {
 					break*/
 				case 'nulis':
 				case 'tulis':
-					if (args.length < 1) return reply('Yang mau di tulis apaan? Gw suruh nulis apa ngentod?')
+					if (args.length < 1) return reply('O que você quer escrever? Eu pedi para escrever o que ngentod?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					teks = body.slice(7)
@@ -1055,7 +1055,7 @@ async function starts() {
                 await limitAdd(sender)
                 break
 				case 'blocklist':
-					teks = 'Ini adalah nomer yg gw block :\n'
+					teks = 'Numeros bloqueados :\n'
 					for (let block of blocked) {
 						teks += `~> @${block.split('@')[0]}\n`
 					}
@@ -1064,7 +1064,7 @@ async function starts() {
 					break
                    case 'chatlist':
 					iqbal.updatePresence(from, Presence.composing)
-					teks = 'Ini adalah nomer yg ngecht gw :\n'
+					teks = 'Numeros cadastrado no ALNBOT :\n'
 					for (let all of totalchat) {
 						teks += `~> @${all}\n`
 					}
@@ -1108,16 +1108,16 @@ async function starts() {
                 break
 				case 'tts':
 				   iqbal.updatePresence(from, Presence.recording) 
-				   if (args.length < 1) return iqbal.sendMessage(from, 'Kode bahasanya mana Ngentod?', text, {quoted: mek})
+				   if (args.length < 1) return iqbal.sendMessage(from, 'Cadê código do idioma?', text, {quoted: mek})
                                    if (!isRegister) return reply(mess.only.daftarB)
                                    if (isLimit(sender)) return reply(ind.limitend(pusname))
 					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return iqbal.sendMessage(from, 'Textnya mana ngentod', text, {quoted: mek})
+					if (args.length < 2) return iqbal.sendMessage(from, 'Cadê o texto', text, {quoted: mek})
 					dtt = body.slice(8)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Textnya kebanyakan anjink mau gw bantai')
+					? reply('QUER ESCREVER UMA BIBLIA KRL?')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -1172,7 +1172,7 @@ async function starts() {
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
-					reply(`Prefix berhasil di ubah menjadi : ${prefix}`)
+					reply(`O prefixo foi alterado com sucesso para : ${prefix}`)
 					break
 				case 'meme':
                                         if (!isRegister) return reply(mess.only.daftarB)
@@ -1196,7 +1196,7 @@ async function starts() {
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 					iqbal.blockUser (`${body.slice(8)}@c.us`, "add")
-					iqbal.sendMessage(from, `perintah Diterima, memblokir ${body.slice(8)}@c.us`, text)
+					iqbal.sendMessage(from, `Pedidos recebidos, bloquear ${body.slice(8)}@c.us`, text)
 					break
 				case 'hilih':
 					iqbal.updatePresence(from, Presence.composing) 
@@ -1215,7 +1215,7 @@ async function starts() {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', members_id, true)
+					mentions('╔══✪〘 Mencione todos 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', members_id, true)
 					break
                 case 'tagall2':
 				iqbal.updatePresence(from, Presence.composing) 
@@ -1228,7 +1228,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					iqbal.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', text, {quoted: mek})
+					iqbal.sendMessage(from, '╔══✪〘 Mencione todos 〙✪══\n╠➥'+teks+'╚═〘 - - - - 〙', text, {quoted: mek})
 					break
                 case 'tagall3':
 				iqbal.updatePresence(from, Presence.composing) 
@@ -1241,7 +1241,7 @@ async function starts() {
 						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					iqbal.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {detectLinks: false, quoted: mek})
+					iqbal.sendMessage(from, '╔══✪〘 Mencione todos 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {detectLinks: false, quoted: mek})
 					break
                         case 'tagall4':
 				iqbal.updatePresence(from, Presence.composing) 
@@ -1254,7 +1254,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@c.us\n`
 						members_id.push(mem.jid)
 					}
-					iqbal.sendMessage(from, '╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {quoted: mek})
+					iqbal.sendMessage(from, '╔══✪〘 Mencione todos 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙', text, {quoted: mek})
 					break
                 case 'tagall5':
 				iqbal.updatePresence(from, Presence.composing) 
@@ -1267,7 +1267,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙')
+					reply('╔══✪〘 Mencione todos 〙✪══\n╠➥'+teks+'╚═〘 - - - - - 〙')
 					break
 					case 'send':
 					var pc = body.slice(6)
@@ -1285,12 +1285,12 @@ async function starts() {
 					break
 				case 'setppbot':
 				iqbal.updatePresence(from, Presence.composing) 
-				if (!isQuotedImage) return reply(`Kirim gambar dengan caption ${prefix}setbotpp atau tag gambar yang sudah dikirim`)
+				if (!isQuotedImage) return reply(`Envie fotos com legendas ${prefix}setbotpp ou tags de imagem que já foram enviadas`)
 					if (!isOwner) return reply(mess.only.ownerB)
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await iqbal.downloadAndSaveMediaMessage(enmedia)
 					await iqbal.updateProfilePicture(botNumber, media)
-					reply('Makasih profile barunya😗')
+					reply('Obrigado pelo novo perfil😗')
 					break
 				case 'bc':
 					iqbal.updatePresence(from, Presence.composing) 
@@ -1308,7 +1308,7 @@ async function starts() {
 						for (let _ of anu) {
 							sendMess(_.jid, `*「 BROADCAST 」*\n\n${body.slice(4)}`)
 						}
-						reply('Suksess broadcast')
+						reply('Transmissão de sucesso')
 					}
 					break
 					case 'bcgc':
@@ -1326,7 +1326,7 @@ async function starts() {
 						for (let _ of groupMembers) {
 							sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
 						}
-						reply('Suksess broadcast group')
+						reply('Grupo de transmissão de sucesso')
 					}
 					break
 				case 'alay':
@@ -1380,12 +1380,12 @@ async function starts() {
 					}, 2000)
                      setTimeout( () => {
 					iqbal.updatePresence(from, Presence.composing) 
-					iqbal.sendMessage(from, 'Sayonara👋', text) // ur cods
+					iqbal.sendMessage(from, 'Adeus👋', text) // ur cods
 					}, 0)
                      break
 
 				case 'chord':
-					if (args.length < 1) return reply('judul lagunya mana tod')
+					if (args.length < 1) return reply('Cadê a canção-título')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(7)					
@@ -1394,7 +1394,7 @@ async function starts() {
                                         await limitAdd(sender)
 					break
 				case 'lirik':
-					if (args.length < 1) return reply('Nama lagunya apa tod?')
+					if (args.length < 1) return reply('Qual o nome da música?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(7)
@@ -1415,7 +1415,7 @@ async function starts() {
 				  case 'ownergroup':
                iqbal.updatePresence(from, Presence.composing) 
               options = {
-          text: `Owner Group ini adalah : @${from.split("-")[0]}`,
+          text: `Este é o proprietário do grupo : @${from.split("-")[0]}`,
           contextInfo: { mentionedJid: [from] }
            }
            iqbal.sendMessage(from, options, text, { quoted: mek } )
@@ -1443,7 +1443,7 @@ async function starts() {
 					iqbal.sendMessage(from, buffer, image, {quoted: mek})
                                         await limitAdd(sender)
 					break	
-				case 'add':
+				case 'add01':
 					iqbal.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1459,7 +1459,7 @@ async function starts() {
 					}
 					break
 
-				case 'kick':
+				case 'kick01':
 					iqbal.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1484,7 +1484,7 @@ async function starts() {
 	              if (!isOwner) return reply(mess.only.ownerB)
 	               const cmd = body.slice(5)
 	               exec(cmd, (err, stdout) => {
-		           if(err) return iqbal.sendMessage(from, "Command Salah tod", text, { quoted: mek })
+		           if(err) return iqbal.sendMessage(from, "Comando Incorreto", text, { quoted: mek })
 		           if (stdout) {
 			       iqbal.sendMessage(from, stdout, text, { quoted: mek })
 		           }
@@ -1523,7 +1523,7 @@ async function starts() {
 								fs.unlinkSync(media)
 							})
 					} else {
-						reply('Foto aja tod')
+						reply('Só uma foto')
 					}
 					break
 
@@ -1531,7 +1531,7 @@ async function starts() {
                       if (!isRegister) return reply(mess.only.daftarB)
                 if (isLimit(sender)) return reply(ind.limitend(pusname))
                      const bugreportt = body.slice(5)
-                      if (bugreportt.length > 300) return iqbal.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
+                      if (bugreportt.length > 300) return iqbal.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 textos', msgType.text, {quoted: mek})
                         var nomor = mek.participant
                        teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${bugreportt}`
                       var options = {
@@ -1539,13 +1539,13 @@ async function starts() {
                          contextInfo: {mentionedJid: [nomor]},
                      }
                     iqbal.sendMessage(NomerOwner, options, text, {quoted: mek})
-                    reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
+                    reply('O problema foi relatado ao proprietário do BOT, relatório falso/main2 não será respondido.')
                     break
                    case 'request':
                 if (!isRegister) return reply(mess.only.daftarB)
                 if (isLimit(sender)) return reply(ind.limitend(pusname))
                      const cfrr = body.slice(8)
-                      if (cfrr.length > 300) return iqbal.sendMessage(from, 'Teksnya Ke Panjang Ngentod, Maksimal 300 Teks', text, {quoted: mek})
+                      if (cfrr.length > 300) return iqbal.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 textos', text, {quoted: mek})
                         var nomor = mek.participant
                        const ress = `*[REQUEST FITURE]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${cfrr}`
 
@@ -1553,8 +1553,8 @@ async function starts() {
                          text: ress,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    iqbal.sendMessage('556993733829@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('REQUEST ANDA TELAH SAMPAI ke owner BOT, Requests palsu/main2 tidak akan ditanggapi.')
+                    iqbal.sendMessage('558688036194@s.whatsapp.net', options, text, {quoted: mek})
+                    reply('SEU PEDIDO FOI PARA O proprietário do BOT, pedidos falsos/main2 não será respondido.')
                     break
                case 'apakah':
                iqbal.updatePresence(from, Presence.composing) 
@@ -1594,7 +1594,7 @@ async function starts() {
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					var nomor = mek.participant
 					const close = {
-					text: `Grup ditutup oleh admin @${nomor.split("@s.whatsapp.net")[0]}\nsekarang *hanya admin* yang dapat mengirim pesan`,
+					text: `Grupo fechado pelo administrador @${nomor.split("@s.whatsapp.net")[0]}\nagora *apenas administradores* podem enviar mensagens`,
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					iqbal.groupSettingChange (from, GroupSettingChange.messageSend, true);
@@ -1607,7 +1607,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					open = {
-					text: `Grup dibuka oleh admin @${sender.split("@")[0]}\nsekarang *semua peserta* dapat mengirim pesan`,
+					text: `Grupo aberto pelo administrador @${sender.split("@")[0]}\nagora *todos os participantes* podem enviar mensagens`,
 					contextInfo: { mentionedJid: [sender] }
 					}
 					iqbal.groupSettingChange (from, GroupSettingChange.messageSend, false)
@@ -1689,14 +1689,14 @@ async function starts() {
 				case 'toimg':
 				    iqbal.updatePresence(from, Presence.composing)
                                     if (!isRegister) return reply(mess.only.daftarB)
-					if (!isQuotedSticker) return reply('❌ reply stickernya asu ❌')
+					if (!isQuotedSticker) return reply('❌ O adesivo de resposta ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await iqbal.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ Gagal tod, pada saat pengubahan sticker ke gambar ❌')
+						if (err) return reply('❌ falhou, ao mudar o adesivo para a imagem ❌')
 						buffer = fs.readFileSync(ran)
 						iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
 						fs.unlinkSync(ran)
@@ -1705,14 +1705,14 @@ async function starts() {
                 	case 'tomp3':
                 	iqbal.updatePresence(from, Presence.composing) 
                         if (!isRegister) return reply(mess.only.daftarB)
-					if (!isQuotedVideo) return reply('❌ reply videonya tod ❌')
+					if (!isQuotedVideo) return reply('❌ responda o vídeo ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await iqbal.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.mp4')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ Gagal asu, pada saat pengubahan video ke mp3 ❌')
+						if (err) return reply('❌ Falha ao converter vídeo para mp3 ❌')
 						buffer = fs.readFileSync(ran)
 						iqbal.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
 						fs.unlinkSync(ran)
@@ -1720,7 +1720,7 @@ async function starts() {
 					break
 
                 case 'ninjalogo':
-                      if (args.length < 1) return reply('Teks nya mana ngentod?')
+                      if (args.length < 1) return reply('Cadê o texto?')
                       if (!isRegister) return reply(mess.only.daftarB)
                       if (isLimit(sender)) return reply(ind.limitend(pusname))
                       gh = body.slice(11)
@@ -1739,7 +1739,7 @@ async function starts() {
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nSource : ${anu.result.source}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA NGENTOD*`
+                 infomp3 = `*Canção encontrada!!!*\nTítulo : ${anu.result.title}\nFonte : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE ENVIANDO POR FAVOR, NÃO SPAM*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1749,7 +1749,7 @@ async function starts() {
                      case 'infocuaca':
 	 if (!isRegister) return reply(mess.only.daftarB)
      if (isLimit(sender)) return reply(ind.limitend(pusname))
-     if (args.length < 1) return reply(from, 'Kirim perintah *!cuaca [tempat]*\nContoh : *!cuaca Jakarta', text)
+     if (args.length < 1) return reply(from, 'Enviar pedidos *!cuaca [tempat]*\nContoh : *!cuaca Jakarta', text)
      reply(mess.wait)
             tempat = `${body.slice(11)}`
             weather = await fetchJson('https://videfikri.com/api/cuaca/?daerah='+ tempat, {method: 'get'})
@@ -1767,13 +1767,13 @@ async function starts() {
 					iqbal.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
 					setTimeout( () => {
-					iqbal.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
+					iqbal.sendMessage(from, '_10 segundos para ir…_', text) // ur cods
 					}, 20000) // 1000 = 1s,
 					setTimeout( () => {
-					iqbal.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
+					iqbal.sendMessage(from, '_20 segundos para ir_…', text) // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-					iqbal.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
+					iqbal.sendMessage(from, '_30 segundos para ir_…', text) // ur cods
 					}, 1000) // 1000 = 1s,
 					setTimeout( () => {
 					iqbal.sendMessage(from, anu.result.soal, text, { quoted: mek }) // ur cods
@@ -1783,18 +1783,18 @@ async function starts() {
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isRegister) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('fitur udah aktif yaa tod')
+						if (isWelkom) return reply('o recurso já está ativo')
 						welkom.push(from)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ SUCCSESS ❭ mengaktifkan fitur welcome di group ini')
+						reply('❬ SUCESSO ❭ ativado o recurso de boas-vindas neste grupo')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, disable)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ SUCCSESS ❭ menonaktifkan fitur welcome di group ini')
+						reply('❬ SUCESSO ❭ desativado o recurso de boas-vindas neste grupo')
 					} else {
-						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
+						reply('digite 1 para ativar, 0 para desativar o recurso')
 					}
                                         break
                                 case 'fakta':
@@ -1811,7 +1811,7 @@ async function starts() {
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(7)
-					if (tels.length > 15) return reply('Teksnya kepanjangan anjink, maksimal 20 karakter')
+					if (tels.length > 15) return reply('O texto tem o comprimento de um cachorro, até 20 caracteres')
 					reply(mess.wait)
 					anu = await fetchJson(`https://kocakz.herokuapp.com/api/flamingtext/water?text=${tels}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
@@ -1823,7 +1823,7 @@ async function starts() {
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(7)
-					if (tels.ength > 10) return reply('Teksnya kepanjangan anjink, maksimal 9 karakter')
+					if (tels.ength > 10) return reply('O texto tem o comprimento de um cachorro, até 9 caracteres')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tlight?text=${tels}&apikey=vinzapi`, {method: 'get'})
 					buff = await getBuffer(anu.result)
@@ -1864,7 +1864,7 @@ async function starts() {
 					break 
                                 case 'nsfwneko':
 				    try{
-						if (!isNsfw) return reply('❌ *NSFW MATI* ❌')
+						if (!isNsfw) return reply('❌ *NSFW ESTÁ DESLIGADO* ❌')
                                                 if (!isRegister) return reply(mess.only.daftarB)
                                                 if (isLimit(sender)) return reply(ind.limitend(pusname))
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
@@ -1905,18 +1905,18 @@ async function starts() {
                                  case 'nsfw':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
 						if (isNsfw) return reply('fitur udah aktif tod')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply('❬ SUCCSESS ❭ mengaktifkan fitur nsfw di group ini')
+						reply('❬ SUCESSO ❭ Ativado o recurso nsfw neste grupo')
 					} else if (Number(args[0]) === 0) {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply('❬ SUCCSESS ❭ menonaktifkan fitur nsfw di group ini')
+						reply('❬ SUCESSO ❭ Desativado o recurso nsfw neste grupo')
 					} else {
-						reply('ketik 1 untuk mengaktifkan, 0 untuk menonaktifkan fitur')
+						reply('digite 1 para ativar, 0 para desativar o recurso')
 					}
 					break	
 				case 'quotes2':
@@ -1991,7 +1991,7 @@ async function starts() {
 					var gh = body.slice(7)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
-					if (args.length < 1) return reply('Teksnya mana Ngentod\nContoh: ${prefix}phlogo |Iqbal|Ganss')
+					if (args.length < 1) return reply('Cadê o texto\nExemplo: ${prefix}phlogo |Los|Angeles')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					reply(mess.wait)
@@ -2025,7 +2025,7 @@ async function starts() {
                 const userXp = getLevelingXp(sender)
                 if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
                 sem = sender.replace('@s.whatsapp.net','')
-                resul = `◪ *LEVEL*\n  ├─ ❏ *Name* : ${sem}\n  ├─ ❏ *User XP* : ${userXp}\n  └─ ❏ *User Level* : ${userLevel}`
+                resul = `◪ *LEVEL*\n  ├─ ❏ *Nome* : ${sem}\n  ├─ ❏ *Usuários XP* : ${userXp}\n  └─ ❏ *Level de usuário* : ${userLevel}`
                iqbal.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
                         console.error(err)
@@ -2044,9 +2044,9 @@ async function starts() {
             case 'leveling':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
-                if (args.length < 1) return reply('Ketik 1 untuk mengaktifkan fitur')
+                if (args.length < 1) return reply('Digite 1 para ativar o recurso')
                 if (args[0] === '1') {
-                    if (isLevelingOn) return reply('*fitur level sudah aktif sebelum nya*')
+                    if (isLevelingOn) return reply('*o recurso de nível esteve ativo antes*')
                     _leveling.push(groupId)
                     fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
                      reply(mess.levelon)
@@ -2055,7 +2055,7 @@ async function starts() {
                     fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
                      reply(mess.leveloff)
                 } else {
-                    reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
+                    reply(' *Digite o comando 1 para ativar, 0 para desativar* \n *Exemplo: ${prefix}leveling 1*')
                 }
             break
                                 case 'infogempa':
@@ -2069,12 +2069,12 @@ async function starts() {
                                         break
                                 case 'nsfwtrap':
                                         try{
-                                                if (!isNsfw) return reply('❌ *NSFW MATI* ❌')
+                                                if (!isNsfw) return reply('❌ *NSFW ESTÁ DESLIGADO* ❌')
                                                 if (!isRegister) return reply(mess.only.daftarB)
                                                 if (isLimit(sender)) return reply(ind.limitend(pusname))
                                                 res = await fetchJson(`https://tobz-api.herokuapp.com/nsfwtrap?apikey=BotWeA`, {method: 'get'})
                                                 buffer = await getBuffer(res.result)
-                                                iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya kak...'})
+                                                iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: '....'})
                                                 await limitAdd(sender)
                                         } catch (e) {
                                                 console.log(`*Error* :`, color(e,'red'))
@@ -2087,43 +2087,43 @@ async function starts() {
                                         const latensi = speed() - timestamp
                                         iqbal.updatePresence(from, Presence.composing) 
 				        uptime = process.uptime()
-                                        iqbal.sendMessage(from, `Speed: *${latensi.toFixed(4)} _Second_*\nDevice: *Realme 3 Pro*\nRAM: *4/64*\nData: *Indosat*\nJaringan: *4G*\nStatus: *Di Charger*`, text, { quoted: mek})
+                                        iqbal.sendMessage(from, `Velocidade: *${latensi.toFixed(4)} _Segundos_*\nDispositivo: *Galaxy S6 Edger*\nRAM: *3/32*\nData: *Indosat*\nRede: *4G*\nStatus: *No carregador*`, text, { quoted: mek})
                                         break
                                 case 'neonlogo':
                                         var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana tod\nContoh: ${prefix}neonlogo IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}neonlogo Los Angeles')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_light&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih tod logonya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui para o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'neonlogo2':
                                         var gh = body.slice(10)
                                         teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana tod\nContoh: ${prefix}neonlogo2 IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}neonlogo2 IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_technology&text=${text1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih tod logonya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui para o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'lionlogo':
                                         var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
                                         var teks2 = gh.split("|")[1];
-                                        if (args.length < 1) return reply('teksnya mana asu\nContoh: ${prefix}lionlogo Iqbal|Ganss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}lionlogo Iqbal|Ganss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${text1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih jing logonya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'jsholat':
@@ -2137,13 +2137,13 @@ async function starts() {
                                 case 'jokerlogo':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana ngentod\nContoh: ${prefix}jokerlogo IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}jokerlogo IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih tod logonya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 /*case 'jadwaltvnow':  
@@ -2158,7 +2158,7 @@ async function starts() {
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         var nom = mek.participant
                                         const tag = {
-                                                text: `@${nom.split("@s.whatsapp.net")[0]} *SEDANG AFK ${tels} JANGAN GANGGU YA NGENTOD*`,
+                                                text: `@${nom.split("@s.whatsapp.net")[0]} *MÉDIO AFK ${tels} NÃO PERTURBE*`,
                                                 contextInfo: { mentionedJid: [nom] }
                                         }
                                         iqbal.sendMessage(from, tag, text, {quoted: mek})
@@ -2166,146 +2166,146 @@ async function starts() {
                                 case 'shadow':
                                         var gh = body.slice(7)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana anjink\nContoh: ${prefix}shadow IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}shadow IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=shadow&text=${text1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih ngentod gambarnya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'burnpaper':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana anjing\nContoh: ${prefix}burnpaper IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}burnpaper IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=burn_paper&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih asuu gambarnya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'coffee':
                                         var gh = body.slice(7)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana asu\nContoh: ${prefix}coffee IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}coffee IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=coffee&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya anjink...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'lovepaper':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana ngentod\nContoh: ${prefix}lovepaper IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}lovepaper IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=love_paper&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya ngentod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'woodblock':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana tolol\nContoh: ${prefix}woodblock IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}woodblock IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=wood_block&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya ngentod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'qowheart':
                                         var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana ngentod\nContoh: ${prefix}qowheart IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}qowheart IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=quote_on_wood_heart&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya anjink...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'mutgrass':
                                         var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana tay\nContoh: ${prefix}mutgrass IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}mutgrass IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=message_under_the_grass&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya tod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'undergocean':
                                         var gh = body.slice(12)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana anjink\nContoh: ${prefix}undergocean IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}undergocean IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=underwater_ocean&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya anjink...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'woodenboards':
                                         var gh = body.slice(13)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana ngentod\nContoh: ${prefix}woodenboards IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}woodenboards IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=wooden_boards&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya tod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'wolfmetal':
                                         var gh = body.slice(10)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana tolol\nContoh: ${prefix}wolfmetal IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}wolfmetal IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=wolf_metal&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya tod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'metalictglow':
                                         var gh = body.slice(14)
                                         var teks1 = gh.split("|")[0];
-                                        if (args.length < 1) return reply('teksnya mana ngentod\nContoh: ${prefix}metalictglow IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}metalictglow IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=metalic_text_glow&text=${teks1}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya tod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case '8bit':
                                         var gh = body.slice(5)
                                         var teks1 = gh.split("|")[0];
                                         var teks2 = gh.split("|")[1];
-                                        if (args.length < 1) return reply('teksnya mana Anjink\nContoh: ${prefix}8bit Iqbal|Ganss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}8bit Iqbal|Ganss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=bit8&text1=${teks1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih gambarnya anjink...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'randomkpop':
@@ -2315,7 +2315,7 @@ async function starts() {
                                         reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomkpop?apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih plastik nya yaa tod...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'fml2':
@@ -2328,7 +2328,7 @@ async function starts() {
                                         await limitAdd(sender)
                                         break
                                 case 'tiktok':
-					if (args.length < 1) return reply('Urlnya mana bangsat?')
+					if (args.length < 1) return reply('Cadê o url filho da puta?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.Iv)
@@ -2340,7 +2340,7 @@ async function starts() {
                                         await limitAdd(sender)
 					break
 				case 'ttp':
-					if (args.length < 1) return reply('Textnya mana bangsat?')
+					if (args.length < 1) return reply('Cadê o texto?')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
 					ranp = getRandom('.png')
@@ -2357,16 +2357,16 @@ async function starts() {
                                         await limitAdd(sender)
 					break
                                 case 'clearall':
-					if (!isOwner) return reply('Kamu siapa?')
+					if (!isOwner) return reply('Quem é Você?')
 					anu = await iqbal.chats.all()
 					iqbal.setMaxListeners(25)
 					for (let _ of anu) {
 						iqbal.deleteChat(_.jid)
 					}
-					reply('Sukses delete all chat :)')
+					reply('Exclua todos os chat com sucesso :)')
 					break
 				case 'simi':
-					if (args.length < 1) return reply('Textnya mana bangsat?')
+					if (args.length < 1) return reply('Cadê o texto?')
 					teks = body.slice(5)
 					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
 					//if (anu.error) return reply('Simi ga tau kak')
@@ -2375,24 +2375,24 @@ async function starts() {
 				case 'simih':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan fitur')
+					if (args.length < 1) return reply('digite 1 para ativar o recurso')
 					if (Number(args[0]) === 1) {
-						if (isSimi) return reply('Mode simi udah aktif yaa tod')
+						if (isSimi) return reply('O modo SIMIH está ativo')
 						samih.push(from)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Sukses mengaktifkan mode simi di group ini ✔️')
+						reply('Ativado o modo simi com sucesso neste grupo ✔️')
 					} else if (Number(args[0]) === 0) {
 						samih.splice(from, 1)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Sukes menonaktifkan mode simi di group ini ✔️')
+						reply('Desativando com sucesso o modo simi neste grupo ✔️')
 					} else {
-						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+						reply('1 para ativar, 0 para desativar')
 					}
 					break
 				case 'clone':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply('Tag target yang ingin di clone')
+					if (args.length < 1) return reply('A tag alvo que você deseja clonar')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
@@ -2400,7 +2400,7 @@ async function starts() {
 						pp = await iqbal.getProfilePicture(id)
 						buffer = await getBuffer(pp)
 						iqbal.updateProfilePicture(botNumber, buffer)
-						mentions(`Foto profile Berhasil di perbarui menggunakan foto profile @${id.split('@')[0]}`, [jid], true)
+						mentions(`Foto do perfil atualizada com sucesso usando a foto do perfil @${id.split('@')[0]}`, [jid], true)
 					} catch (e) {
 						reply('Gagal tod')
 					}
@@ -2409,23 +2409,23 @@ async function starts() {
                                         var gh = body.slice(9)
                                         var teks1 = gh.split("|")[0];
                                         var teks2 = gh.split("|")[1];
-                                        if (args.length < 1) return reply('teksnya mana bangsat\nContoh: ${prefix}pubglogo Iqbal|Ganss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}pubglogo Iqbal|Ganss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=pubg&text1=${teks1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih logonya bangsat...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'herrypotter':
                                 case 'harrypotter':
                                         var gh = body.slice(12)
-                                        if (args.length < 1) return reply('teksnya mana bangsat\nContoh: ${prefix}harrypotter IqbalGanss')
+                                        if (args.length < 1) return reply('onde está o texto\nExemplo: ${prefix}harrypotter IqbalGanss')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=harry_potter&text=${gh}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
-                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih yaa bangsat gambarnya...'})
+                                        iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: 'Aqui está o logotipo...'})
                                         await limitAdd(sender)
                                         break
                                 case 'katabijak':
@@ -2444,7 +2444,7 @@ async function starts() {
                                         break
                                 case 'fancytext':
                                         var teks1 = body.slice(10)
-                                        if (args.length < 1) return reply(`teksnya mana ngentod...\nContoh:\n${prefix}fancytext IqbalGanss`)
+                                        if (args.length < 1) return reply(`onde está o texto\nExemplo...\nContoh:\n${prefix}fancytext IqbalGanss`)
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://arugaz.herokuapp.com/api/random/text/fancytext?text=${teks1}`, {method: 'get'})
@@ -2458,7 +2458,7 @@ async function starts() {
                                         break
                          case 'transfer':
 				if (!isRegister) return reply(mess.only.daftarB)
-				if (args.length < 1) return reply('Lu mao transfer berapa tod? Pastiin uang lu juga cukup yaa tod! \n\nCara cek uang: ${prefix}bal')
+				if (args.length < 1) return reply('Quanto você deseja transferir por dia? Certifique-se de ter dinheiro suficiente também! \n\nComo verificar dinheiro: ${prefix}bal')
                 const tujuan = q.substring(0, q.indexOf('|') - 1)
                 const jumblah = q.substring(q.lastIndexOf('|') + 1)
                 if (checkATMuser(sender) < jumblah) return reply(`uang lu gk cukup buat transfer`)
@@ -2471,16 +2471,16 @@ async function starts() {
                 reply(`*「 SUKSES 」*\n\npengiriman uang telah sukses\ndari : +${sender.split("@")[0]}\nke : +${tujuan}\njumblah transfer : ${jumblah}\npajak : ${fee}`)
                 break
                                 case 'buylimit':
-                                        if (args.length < 1) return reply('Lu mao beli berapa limit tod? Pastiin uang lu juga cukup yaa tod! \n\nCara cek uang: ${prefix}bal')
+                                        if (args.length < 1) return reply('Quer comprar quanto é o seu limite hoje? Certifique-se de ter dinheiro suficiente também! \n\nComo verificar dinheiro: ${prefix}bal')
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         payout = body.slice(10)
                                         const koinPerlimit = 1000
                                         const total = koinPerlimit * payout
-                                        if ( checkATMuser(sender) <= total) return reply(`Uang lu blm cukup bangsat. lu kumpulin lagi ntar klo udah cukup baru beli lagi`)
+                                        if ( checkATMuser(sender) <= total) return reply(`Você não tem dinheiro suficiente, filho da puta. você o coleta novamente mais tarde se for o suficiente, basta comprá-lo novamente`)
                                         if ( checkATMuser(sender) >= total ) {
                                                 confirmATM(sender, total)
                                                 bayarLimit(sender, payout)
-                                                await reply(`*「 PEMBAYARAN BERHASIL 」*\n\n*pengirim* : Admin\n*penerima* : ${pushname}\n*nominal pembelian* : ${payout} \n *harga limit* : ${koinPerlimit}/limit\n *sisa uang mu* : ${checkATMuser(sender)}\n\nproses berhasil dengan nomer pembayaran \n${createSerial(15)}`)
+                                                await reply(`*「 PAGAMENTO DE SUCESSO 」*\n\n*remetente* : Admin\n*receptor* : ${pushname}\n*compra nominal* : ${payout} \n *preço limite* : ${koinPerlimit}/limit\n *o resto do seu dinheiro* : ${checkATMuser(sender)}\n\nprocesso bem sucedido com número de pagamento \n${createSerial(15)}`)
                                         }
                                         break
                                 case 'limit':
@@ -2490,43 +2490,43 @@ async function starts() {
                                 case 'event':
                                         if (!isGroup) return reply(mess.only.group)
                                         if (!isOwner) return reply(mess.only.ownerB)
-                                        if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+                                        if (args.length < 1) return reply('digite 1 para ativar')
                                         if (Number(args[0]) === 1) {
-                                                if (isEventon) return reply('*SUDAH AKTIF* !!!')
+                                                if (isEventon) return reply('*ATIVADO* !!!')
                                                 event.push(from)
                                                 fs.writeFileSync('./database/json/event.json', JSON.stringify(event))
-                                                reply('*❬ SUCCSESS ❭ Mengaktifkan EVENT di group ini*')
+                                                reply('*❬ SUCESSO ❭ Ativado EVENT neste grupo*')
                                         } else if (Number(args[0]) === 0) {
                                                 event.splice(from, 1)
                                                 fs.writeFileSync('./database/json/event.json', JSON.stringify(event))
-                                                reply('*❬ SUCCSESS ❭ Menonaktifkan EVENT di group ini*')
+                                                reply('*❬ SUCESSO ❭ Desativado EVENT neste grupo*')
                                         } else {
                                                 reply(ind.satukos())
                                         }
                                         break
                                 case 'register':
-                                        if (isRegister) return  reply(`「 SUDAH REGISTER 」 \n\nLu kan udah register ngentod mau gw pukul...`)
+                                        if (isRegister) return  reply(`「 JÁ SE INSCREVA 」 \n\nVocê já se cadastrou no SMS, quero acertar...`)
                                         if (!q.includes('|')) return  reply(ind.wrongf())
                                         const namaUser = q.substring(0, q.indexOf('|') - 0)
                                         const umurUser = q.substring(q.lastIndexOf('|') + 1)
                                         const serialUser = createSerial(20)
-                                        if(isNaN(umurUser)) return await reply('Umur lu brp tay, pake umur aseli lah bangsat!!')
-                                        if (namaUser.length >= 30) return reply(`Nama lu panjang bet anjink kea kereta`)
-                                        if (umurUser > 40) return reply(`Buset broo lu ketuan anjink`)
-                                        if (umurUser < 15) return reply(`Buset lu gk bisa register dikarnakan lu masih bocil`)
+                                        if(isNaN(umurUser)) return await reply('Sua idade é muito baixa, usando sua idade original seu filho da puta!!')
+                                        if (namaUser.length >= 30) return reply(`Seu nome é uma aposta longa para um trem`)
+                                        if (umurUser > 40) return reply(`Maldito irmão, você pegou um cachorro`)
+                                        if (umurUser < 15) return reply(`Droga, você não pode se registrar porque você ainda é uma criança`)
                                         veri = sender
                                         if (isGroup) {
                                                 addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
                                                 await reply(ind.registered(namaUser, umurUser, serialUser, time, sender))
                                                 addATM(sender)
                                                 addLevelingId(sender)
-                                                console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'), 'in', color(sender || groupName))
+                                                console.log(color('[REGISTRO]'), color(time, 'yellow'), 'Nome:', color(namaUser, 'cyan'), 'Idade:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'), 'no', color(sender || groupName))
                                         } else {
                                                 addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
                                                 await reply(ind.registered(namaUser, umurUser, serialUser, time, sender))
                                                 addATM(sender)
                                                 addLevelingId(sender)
-                                                console.log(color('[REGISTER]'), color(time, 'yellow'), 'Name:', color(namaUser, 'cyan'), 'Age:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'))
+                                                console.log(color('[REGISTRO]'), color(time, 'yellow'), 'Nome:', color(namaUser, 'cyan'), 'Idade:', color(umurUser, 'cyan'), 'Serial:', color(serialUser, 'cyan'))
                                         }
                                         break
                                 case 'mining':
@@ -2552,7 +2552,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 iqbal.groupUpdateSubject(from, `${body.slice(9)}`)
-                iqbal.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, {quoted: mek})
+                iqbal.sendMessage(from, `\`\`\`✓Alteração do nome do grupo para\`\`\` *${body.slice(9)}*`, text, {quoted: mek})
                 break
             case 'setdesc':
                 iqbal.updatePresence(from, Presence.composing) 
@@ -2561,7 +2561,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 iqbal.groupUpdateDescription(from, `${body.slice(9)}`)
-                iqbal.sendMessage(from, `\`\`\`✓Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, {quoted: mek})
+                iqbal.sendMessage(from, `\`\`\`✓Alteração das descrições do grupo com sucesso\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, {quoted: mek})
                 break
                                 case 'translate':
                                         aruga = body.slice(10)
@@ -2591,7 +2591,7 @@ async function starts() {
                                         if (!isRegister) return reply(mess.only.daftarB)
                                         var nom = mek.participant
                                         const tagme = {
-                                                text: `@${nom.split("@s.whatsapp.net")[0]} Tuh dah gw tag!`,
+                                                text: `@${nom.split("@s.whatsapp.net")[0]} Eu marquei!`,
                                                 contextInfo: { mentionedJid: [nom] }
                                         }
                                         iqbal.sendMessage(from, tagme, text, {quoted: mek})
@@ -2599,11 +2599,11 @@ async function starts() {
                                 case 'ip': 
                                         ipnya = body.slice(3)
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        if (args.length < 1) return reply(`ip nya mana tod? \nContoh: ${prefix}ip 8.8.8.8`)
+                                        if (args.length < 1) return reply(`onde está o ip? \nExemplo: ${prefix}ip 8.8.8.8`)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://mnazria.herokuapp.com/api/check?ip=${ipnya}`, {method: 'get'})
                                         lang = anu.location.languages[0]
-                                        teks = `◪ *IP* \n  │\n  ├─ ❏ IP : ${anu.ip} \n  ├─ ❏ City : ${anu.city} \n  ├─ ❏ Continent Code : ${anu.continent_code} \n  ├─ ❏ Continent Name : ${anu.continent_name} \n  ├─ ❏ Country Code : ${anu.country_code} \n  ├─ ❏ Country Name : ${anu.country_name} \n  ├─ ❏ Latitude : ${anu.latitude} \n  ├─ ❏ Calling Code : ${anu.location.calling_code} \n  ├─ ❏ Capital : ${anu.location.capital} \n  ├─ ❏ Country Flag : ${anu.location.country_flag} \n  ├─ ❏ Country Flag Emoji : ${anu.location.country_flag_emoji} \n  ├─ ❏ Country Flag Emoji Unicode : ${anu.location.country_flag_emoji_unicode} \n  ├─ ❏ Geoname ID : ${anu.location.geoname_id} \n  ├─ ❏ Languages : ${lang.code} , ${lang.name} , ${lang.native} \n  ├─ ❏ Longitude : ${anu.longitude} \n  ├─ ❏ Region Code : ${anu.region_code} \n  ├─ ❏ Region Name : ${anu.region_name} \n  ├─ ❏ Type : ${anu.type} \n  └─ ❏ Zip : ${anu.zip} `
+                                        teks = `◪ *IP* \n  │\n  ├─ ❏ IP : ${anu.ip} \n  ├─ ❏ Cidade : ${anu.city} \n  ├─ ❏ Código Continente : ${anu.continent_code} \n  ├─ ❏ Nome do Continente : ${anu.continent_name} \n  ├─ ❏ Código do país : ${anu.country_code} \n  ├─ ❏ Nome do país : ${anu.country_name} \n  ├─ ❏ Latitude : ${anu.latitude} \n  ├─ ❏ Código de Chamada : ${anu.location.calling_code} \n  ├─ ❏ Capital : ${anu.location.capital} \n  ├─ ❏ Bandeira do país : ${anu.location.country_flag} \n  ├─ ❏ Emoji de bandeira do país : ${anu.location.country_flag_emoji} \n  ├─ ❏ Country Flag Emoji Unicode : ${anu.location.country_flag_emoji_unicode} \n  ├─ ❏ Geoname ID : ${anu.location.geoname_id} \n  ├─ ❏ línguas : ${lang.code} , ${lang.name} , ${lang.native} \n  ├─ ❏ Longitude : ${anu.longitude} \n  ├─ ❏ Código Regional : ${anu.region_code} \n  ├─ ❏ Nome da Região : ${anu.region_name} \n  ├─ ❏ Modelo : ${anu.type} \n  └─ ❏ Fecho eclair : ${anu.zip} `
                                         iqbal.sendMessage(from, teks, text)
                                         await limitAdd(sender)
                                         break
@@ -2618,7 +2618,7 @@ async function starts() {
                     reply(hasil)
                     break
                case 'spamsms':  
-					if (args.length < 1) return reply('Nomer Target nya tod')
+					if (args.length < 1) return reply('Número Alvo')
 					if (!isRegister) return reply(mess.only.daftarB)
                     if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(9)
@@ -2627,7 +2627,7 @@ async function starts() {
 					reply(anu.logs)
 					break	
 				case 'spamgmail':  
-					if (args.length < 1) return reply('gmail target nya jink')
+					if (args.length < 1) return reply('gmail do alvo')
 					if (!isRegister) return reply(mess.only.daftarB)
                     if (isLimit(sender)) return reply(ind.limitend(pusname))
 					tels = body.slice(11)
@@ -2638,24 +2638,24 @@ async function starts() {
                                 case 'happymod':
                                         toby = body.slice(10)
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        if (args.length < 1) return reply(`game yang mau di cari apaan bangsat? \nContoh : ${prefix}happymod pubg`)
+                                        if (args.length < 1) return reply(`Que tipo de jogo você quer procurar, bastardo? \nExemplo : ${prefix}happymod pubg`)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${toby}&apikey=BotWeA`, {method: 'get'})
                                         hepi = anu.result[0]
                                         buffer = await getBuffer(hepi.image)
-                                        teks = `◪ *HAPPY MOD* \n  │\n  ├─ ❏ Title : ${hepi.title} \n  ├─ ❏ Size : ${hepi.size} \n  ├─ ❏ Version : ${hepi.version} \n  ├─ ❏ Root : ${hepi.root} \n  ├─ ❏ Purchase : ${hepi.purchase} \n  ├─ ❏ Price : ${hepi.price} \n  ├─ ❏ Link : ${hepi.link} \n  └─ ❏ Download : ${hepi.download} `
+                                        teks = `◪ *HAPPY MOD* \n  │\n  ├─ ❏ Título : ${hepi.title} \n  ├─ ❏ Tamanho : ${hepi.size} \n  ├─ ❏ Versão : ${hepi.version} \n  ├─ ❏ Root : ${hepi.root} \n  ├─ ❏ Compra : ${hepi.purchase} \n  ├─ ❏ Preço : ${hepi.price} \n  ├─ ❏ Link : ${hepi.link} \n  └─ ❏ Download : ${hepi.download} `
                                         iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
                                         await limitAdd(sender)
                                         break
                                  case 'moddroid':
                                         toby = body.slice(10)
                                         if (!isRegister) return reply(mess.only.daftarB)
-                                        if (args.length < 1) return reply(`game yang mau di cari apaan bangsat? \nContoh : ${prefix}moddroid pubg`)
+                                        if (args.length < 1) return reply(`Que tipo de jogo você quer procurar, bastardo? \nExemplo : ${prefix}moddroid pubg`)
                                         if (isLimit(sender)) return reply(ind.limitend(pusname))
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${toby}&apikey=BotWeA`, {method: 'get'})
                                         hupo = anu.result[0]
                                         buffer = await getBuffer(hupo.image)
-                                        teks = `◪ *MODDROID* \n  │\n  ├─ ❏ Title : ${hupo.title} \n  ├─ ❏ Size : ${hupo.size} \n  ├─ ❏ Version : ${hupo.version} \n  ├─ ❏ Root : ${hupo.root} \n  ├─ ❏ Purchase : ${hupo.purchase} \n  ├─ ❏ Price : ${hupo.price} \n  ├─ ❏ Link : ${hupo.link} \n  └─ ❏ Download : ${hupo.download} `
+                                        teks = `◪ *MODDROID* \n  │\n  ├─ ❏ Título : ${hupo.title} \n  ├─ ❏ Tamanho : ${hupo.size} \n  ├─ ❏ Versão : ${hupo.version} \n  ├─ ❏ Root : ${hupo.root} \n  ├─ ❏ Compra : ${hupo.purchase} \n  ├─ ❏ Preço : ${hupo.price} \n  ├─ ❏ Link : ${hupo.link} \n  └─ ❏ Download : ${hupo.download} `
                                         iqbal.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
                                         await limitAdd(sender)
                                         break
@@ -2693,10 +2693,10 @@ async function starts() {
                     case 'persengay': 
 	      case 'gaypersen':
 				if (!isRegister) return reply(mess.only.daftarB)
-				if (args.length < 1) return reply('tag temen lu tod yg gay!')
+				if (args.length < 1) return reply('Marque seu amigo gay!')
 				rate = body.slice(11)
 				const kl = persengayy[Math.floor(Math.random() * persengayy.length)]
-				iqbal.sendMessage(from, 'Persen Gay: *'+rate+'*\n\nJawaban : '+kl+'', text, { quoted: mek })
+				iqbal.sendMessage(from, 'Porcento Gay: *'+rate+'*\n\nResposta : '+kl+'', text, { quoted: mek })
 				await limitAdd(sender) 
 				break  
 
@@ -2717,21 +2717,21 @@ async function starts() {
                                 	if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('ketik 1 untuk mengaktifkan')
+					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
-						if (isAntiLink) return reply('anti link group sudah aktif')
+						if (isAntiLink) return reply('o grupo anti-link está ativo')
 						antilink.push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Sukses mengaktifkan anti link group di group ini ✔️')
-						iqbal.sendMessage(from,`Perhatian kepada seluruh member BANGSAT anti link grup aktif apabila lu ngirim link grup laen akan di kick dari grup`, text)
+						reply('Ativado grupo anti-link com sucesso neste grupo ✔️')
+						iqbal.sendMessage(from,`Atenção a todos os membros do grupo ativo BANGSAT anti-link se você enviar um link de outros grupos serão expulsos do grupo`, text)
 					} else if (Number(args[0]) === 0) {
-						if (!isantilink) return reply('Mode anti link group nonaktif')
+						if (!isantilink) return reply('O modo de grupo anti-link está desativado')
 						var ini = anti.indexOf(from)
 						antilink.splice(ini, 1)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Sukes menonaktifkan anti link group di group ini ✔️')
+						reply('Desativado grupo anti-link com sucesso neste grupo ✔️')
 					} else {
-						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+						reply('1 para ativar, 0 para desativar')
 					}
 					break
 					case 'leaderboard':
@@ -2783,7 +2783,7 @@ async function starts() {
 			   if (!isRegister) return reply(mess.only.daftarB)
                if (isLimit(sender)) return reply(ind.limitend(pusname))
 			   reply(mess.wait)
-            	    if (args.length < 1) return reply('teksnya mana tolol?')
+            	    if (args.length < 1) return reply('onde está o texto?')
                     teks = body.slice(9)
                     anu = await fetchJson(`https://api.arugaz.my.id/api/media/pornhub/search?query=${teks}`, {method: 'get'})
                     teks = `===============\n`
@@ -2797,7 +2797,7 @@ async function starts() {
 			   if (!isRegister) return reply(mess.only.daftarB)
                if (isLimit(sender)) return reply(ind.limitend(pusname))
 			   reply(mess.wait)
-              	    if (args.length < 1) return reply('teksnya mana asu?')
+              	    if (args.length < 1) return reply('teonde está o texto?')
                     teks = body.slice(9)
                     anu = await fetchJson(`https://api.vhtear.com/nekosearch?query=${teks}&apikey=AW62938KK46292gJ73639h`, {method: 'get'})
                     teks = `===============\n`
@@ -2811,7 +2811,7 @@ async function starts() {
 			   if (!isRegister) return reply(mess.only.daftarB)
                if (isLimit(sender)) return reply(ind.limitend(pusname))
 			   reply(mess.wait)
-              	    if (args.length < 1) return reply('teksnya mana anjink?')
+              	    if (args.length < 1) return reply('onde está o texto?')
                     anu = await fetchJson(`https://api.arugaz.my.id/api/media/xvideo/search?query=${body.slice(9)}`, {method: 'get'})
                     teks = `===============\n`
                     for (let b of anu.result) {
@@ -2951,7 +2951,7 @@ async function starts() {
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+						console.log(color('[AVISO]','red'), 'Comando não registrado de', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
