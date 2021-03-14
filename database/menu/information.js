@@ -6,63 +6,63 @@ const information = (prefix, botName, ownerName) => {
    ╽
    ┠≽ *Prefix* : 「  ${prefix}  」
    ┠≽ *Creator* : ${ownerName}
-   ┠≽ *Version* : 「  2.4.9  」
+   ┠≽ *Version* : 「  7.0.1  」
    ╿
 ┯┷ *〈 ABOUT 〉*
 ╽
 ┠≽ *${prefix}info*
-┃ *Desc* : Show Bot Details
+┃ *Desc* : Mostrar detalhes do bot
 ┠──────────────╼
 ┠≽ *${prefix}blocklist*
-┃ *Desc* : Show Blocked User
+┃ *Desc* : Mostrar todos os usuários de bate-papo
 ┠──────────────╼
 ┠≽ *${prefix}chatlist* 
-┃ *Desc* : Show All Chat User
+┃ *Desc* : Mostrar todos os usuários de bate-papo
 ┠──────────────╼
 ┠≽ *${prefix}ping*
-┃ *Desc* : Show Connection Bot Speed
+┃ *Desc* : Mostrar velocidade do bot de conexão
 ┠──────────────╼
 ┠≽ *${prefix}totaluser*
-┃ *Desc* : Show All User Use Bot
+┃ *Desc* : Mostrar bot de uso de todos os usuários
 ┠──────────────╼
 ┠≽ *${prefix}request*
-┃ *Desc* : Request Fiture To Owner Bot
+┃ *Desc* : Solicitar recursos para o robô proprietário
 ┠──────────────╼
 ┠≽ *${prefix}bugreport* <text>
-┃ *Desc* : Report Bug To Owner Bot
+┃ *Desc* : Reportar bug ao proprietário do bot
 ╿
 ┷┯ *〈 INFORMATION 〉*
    ╽
    ┠≽ *${prefix}bahasa*
-   ┃ *Desc* : Submit Language Code
+   ┃ *Desc* : Enviar código de idioma
    ┠──────────────╼
    ┠≽ *${prefix}kodenegara*
    ┃ *Desc* : Send Country Code
    ┠──────────────╼
    ┠≽ *${prefix}kbbi* <question>
-   ┃ *Desc* : Asking KBBI
+   ┃ *Desc* : Perguntando ao KBBI
    ┠──────────────╼
    ┠≽ *${prefix}fakta*
-   ┃ *Desc* : Send a Random Fact
+   ┃ *Desc* : Envie um fato aleatório
    ┠──────────────╼
    ┠≽ *${prefix}jadwaltv*
-   ┃ *Desc* : Testing
+   ┃ *Desc* : Testando
    ┠──────────────╼
    ┠≽ *${prefix}katabijak*
-   ┃ *Desc* : Random Quotes
+   ┃ *Desc* : Citações Aleatórias
    ┠──────────────╼
    ┠≽ *${prefix}faktaunik*
-   ┃ *Desc* : Send a Random Fact
+   ┃ *Desc* : Seencontrar um fato aleatório
    ┠──────────────╼
    ┠≽ *${prefix}infocuaca* <area>
-   ┃ *Desc* : Send Weather Information
+   ┃ *Desc* : Enviar informações meteorológicas
    ┠──────────────╼
    ┠≽ *${prefix}infogempa*
-   ┃ *Desc* : Sending Earthquake Information
+   ┃ *Desc* : Enviando informações sobre terremotos
    ┠──────────────╼
    ┠≽ *${prefix}covidcountry* <country>
-   ┃ *Desc* : Sending Covid-19 Information
+   ┃ *Desc* : Envio de informações para Covid-19
    ╿ *${ownerName}*,
-   ╰╼≽ *Developer © ${botName}`
+   ╰╼≽ *ᴀʟɴ ʙᴏᴛ © ${botName}`
 }
 exports.information = information
